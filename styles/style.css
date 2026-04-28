@@ -1,0 +1,116 @@
+@import './fonts.css';
+@import './base.css';
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size-xl);
+
+    width: 100%;
+    padding: var(--size-4xl) var(--size-2xl);
+}
+
+.header-container {
+    
+}
+
+
+
+
+@media (min-width: 768px) {
+	.container{
+		max-width: 768px;
+	}
+
+    section {
+        padding: var(--size-6xl) var(--size-4xl);
+    }
+
+    p {
+        font-size: var(--size-sm);
+    }
+
+    .header-container {
+        align-self: center;
+        text-align: center;
+        width: 60%;
+        
+        & div:nth-of-type(1) {
+            display: flex;
+            flex-direction: column;
+            gap: var(--size-xxs);
+        }
+
+        & .header-image {
+            position: relative;
+            margin-top: var(--size-9xl);
+            min-height: 300px;
+            width: 100%;
+
+            & img {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+
+                transition: transform 0.3s ease;
+            }
+
+            & label .item-header {
+                width: 15vw;
+                transform: translate(-120%, -60%) rotate(-10deg);
+                cursor: pointer;
+            }
+
+            & label:hover .item-header{
+                transform: translate(-120%, -75%) rotate(-10deg);
+            }
+
+            & input:checked + label .item-header {
+                z-index: 10;
+                transform: translate(-200%, -120%) rotate(0deg) scale(1.8);
+            }
+        }
+    }
+
+    .index h1{
+        font-size: var(--size-8xl);
+        font-style: italic;
+        color: var(--colour-primary);
+    }
+
+    .index h2{
+        font-size: var(--size-xl);
+        color: var(--colour-primary);
+        font-family: 'ClashDisplay-light', serif;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 1024px) {
+	.container{
+		max-width: 1024px;
+	}
+
+    section {
+        padding: var(--size-8xl) var(--size-6xl);
+    }
+
+    p {
+        font-size: var(--size-base);
+    }
+}
+
+@media (min-width: 1280px) {
+	.container{
+		max-width: 1280px;
+	}
+}
+
+@media (min-width: 1536px) {
+	.container{
+		max-width: 1536px;
+	}
+    
+}
