@@ -44,3 +44,19 @@ loader.addEventListener('transitionend', (e) => {
         document.body.classList.add('loaded');
     }
 });
+
+
+// on click 
+const itemHeader = document.querySelector('.item-header');
+const headerImage = document.querySelector('.header-image');
+
+itemHeader.addEventListener('click', (e) => {
+    e.stopPropagation();
+    itemHeader.classList.toggle('is-active');
+    document.body.classList.toggle('dimmed');
+});
+
+document.addEventListener('click', () => {
+    itemHeader.classList.remove('is-active');
+    document.body.classList.remove('dimmed');
+});
