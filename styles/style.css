@@ -1,5 +1,6 @@
 @import './fonts.css';
 @import './base.css';
+@import './spreker.css';
 
 section {
     display: flex;

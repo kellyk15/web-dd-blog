@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Kelly Kha</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
+</head>
+
+<body class="container speakers">
+    <header>
+        <div>
+            <a href="index.html">
+                <img class="logo" src="images/logo.png" alt="logo">
+            </a>
+
+            <button class="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="speakers.html">Sprekers</a></li>
+                <li><a href="about.html">Over mij</a></li>
+                <li><a href="reflection.html">Reflectie</a></li>
+
+                <li>
+                    <label for="colorscheme-btn">
+                    <input type="checkbox" name="colorscheme-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </label>
+                </li>
+            </ul>  
+        </nav>
+    </header>
+
+    <section class="spreker-intro">
+        <div class="banner">
+            <div class="banner-photo">
+                <img src="images/spreker-kilian.png" alt="Kilian Valkhof">
+            </div>
+        </div>
+
+        <div class="banner-content">
+            <nav class="breadcrumbs" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li> /
+                    <li><a href="/speakers.html">Sprekers</a></li> /
+                    <li><a href="#">Huidige pagina</a></li>
+                </ol>
+            </nav>
+            <h1>Kilian Valkhof</h1>
+            <p class="banner-username">@Polypane</p>
+        </div>
+
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="posts">Mijn posts</button>
+            <button class="tab-btn" data-tab="speakers">Andere sprekers</button>
+        </div>
+    </section>
+
+    <section class="tab-content" id="posts">
+        <div class="content-post-container">
+            <div class="post-profile-pic">
+                <img src="images/profile-pic.png" alt="">
+            </div>
+
+            <div class="content-post">
+                <h2> kelly <span>@kellykha · 04 Apr 26</span></h2>
+
+                <div class="content-post-text">
+                    <p>Dit is mijn eerste post!</p>
+                </div>
+
+                <div class="content-post-interactions">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                        </svg> <p>0</p>
+                    </div>
+
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                        </svg> <p>0</p>
+                    </div>
+
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg> <p>0</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-content" id="speakers">
+        
+    </section>
+
+    
+
+    <footer>
+        <p>© 2026 Kelly Kha. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
