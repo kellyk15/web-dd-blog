@@ -72,6 +72,10 @@ p {
     font-size: var(--size-xs);
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .button-v1{
     border: solid 2px var(--colour-primary-border);
     background-color: var(--colour-primary);
