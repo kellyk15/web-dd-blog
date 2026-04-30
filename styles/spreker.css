@@ -72,8 +72,16 @@
 }
 
 .tab-content{
-    padding: var(--size-4xl) 0;
+    padding: 0 0;
     gap: var(--size-2xl);
+
+    &#posts {
+        gap: 0;
+    }
+
+    &#speakers{
+        padding: var(--size-2xl) 0;
+    }
 }
 
 .content-post-container{
@@ -84,7 +92,11 @@
     border-bottom: 1px solid var(--colour-primary-border);
 
     width: 100%;
-    padding: 0 var(--size-base) var(--size-2xl) var(--size-base);
+    padding: var(--size-2xl) var(--size-base) var(--size-2xl) var(--size-base);
+
+    &:hover {
+        background-color: rgb(99 136 211 / 0.1);
+    }
 }
 
 .post-profile-pic {
@@ -206,6 +218,7 @@
 }
 
 
+
 @media (min-width: 768px) {
 	.container{
 		max-width: 768px;
@@ -219,7 +232,7 @@
         width: 100px;
         height: 100px;
         bottom: -50px;
-        left: 40px;
+        left: 20px;
     }
 
 
@@ -231,6 +244,27 @@
         font-size: var(--size-2xl);
         font-style: normal;
         color: var(--colour-text);
+    }
+
+    .post-profile-pic{
+        width: 80px;
+        height: 80px;
+    }
+
+    .content-post {
+        & h2 {
+            font-size: var(--size-base);
+        }
+    }
+
+    .speaker-content {
+        & h2 {
+            font-size: var(--size-base);
+
+            & span {
+                font-size: var(--size-sm);
+            }
+        }
     }
 }
 
@@ -265,6 +299,14 @@
     .twitterstyle .spreker-intro {
         grid-column: 2 / 4;
         border-bottom: 1px solid #c3cde3;
+    }
+
+    .twitterstyle .banner-content {
+        gap: var(--size-sm);
+
+        & h1 {
+            font-size: var(--size-3xl);
+        }
     }
 
     .twitterstyle #posts {

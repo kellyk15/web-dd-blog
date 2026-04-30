@@ -80,3 +80,12 @@ if (tabBtns.length > 0) {
         });
     });
 }
+
+// automatisch naar boven scrollen bij laden van index.html
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
+        history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+    }
+});
