@@ -32,31 +32,51 @@ function handleKeydown(event) {
 
 const loader = document.querySelector('.loading-animation');
 
-window.addEventListener('load', () => {
-    loader.classList.add('revealed');
-});
+if (loader) {
+    window.addEventListener('load', () => {
+        loader.classList.add('revealed');
+    });
 
-loader.addEventListener('transitionend', (e) => {
-    if (e.propertyName === 'mask-size') {
-        loader.classList.add('hidden');
-    }
-    if (e.propertyName === 'transform') {
-        document.body.classList.add('loaded');
-    }
-});
-
+    loader.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'mask-size') {
+            loader.classList.add('hidden');
+        }
+        if (e.propertyName === 'transform') {
+            document.body.classList.add('loaded');
+        }
+    });
+}
 
 // on click 
 const itemHeader = document.querySelector('.item-header');
-const headerImage = document.querySelector('.header-image');
 
-itemHeader.addEventListener('click', (e) => {
-    e.stopPropagation();
-    itemHeader.classList.toggle('is-active');
-    document.body.classList.toggle('dimmed');
-});
+if (itemHeader) {
+    itemHeader.addEventListener('click', (e) => {
+        e.stopPropagation();
+        itemHeader.classList.toggle('is-active');
+        document.body.classList.toggle('dimmed');
+    });
 
-document.addEventListener('click', () => {
-    itemHeader.classList.remove('is-active');
-    document.body.classList.remove('dimmed');
-});
+    document.addEventListener('click', () => {
+        itemHeader.classList.remove('is-active');
+        document.body.classList.remove('dimmed');
+    });
+}
+
+// tabs
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+if (tabBtns.length > 0) {
+    document.getElementById('speakers').style.display = 'none';
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            tabContents.forEach(content => content.style.display = 'none');
+            document.getElementById(btn.dataset.tab).style.display = 'flex';
+        });
+    });
+}
