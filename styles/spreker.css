@@ -328,6 +328,10 @@
         align-self: start; 
     }
     
+    #speakers-component {
+        display: contents;
+    }
+    
     .twitterstyle #speakers .speaker-content-container {
         min-height: fit-content; 
         flex-shrink: 0;

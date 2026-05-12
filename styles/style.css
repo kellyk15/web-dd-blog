@@ -83,6 +83,7 @@ body.dimmed .overlay {
     flex-direction: column;
     justify-content: center;
     gap: var(--size-4xl);
+    cursor: pointer;
 }
 
 .sprekers-card {
@@ -94,7 +95,8 @@ body.dimmed .overlay {
     transition: transform 0.6s;
 }
 
-.sprekers-card:hover {
+/* de hover zit nu op een container ipv de kaart zelf zodat hover het niet raar doet */
+.sprekers-card-container:hover .sprekers-card {
     transform: rotateY(180deg) scale(1.2);
     z-index: 2;
 }
@@ -191,7 +193,7 @@ body.dimmed .overlay {
 .sprekers-container{
     animation-name: appear-from-left;
     animation-timeline: view();
-    animation-range: cover 0% contain 50%;
+    animation-range: cover 0% contain 10%;
     animation-fill-mode: both;
 }
 
@@ -211,6 +213,64 @@ footer {
     font-family: 'Archivo-Regular', serif;
     font-size: var(--size-sm);
 }
+
+
+/* vakken */
+.vakken-content-wrapper {
+    /* width: 100%;
+    display: flex;
+    justify-content: center; */
+    /* background-color: var(--colour-primary); */
+}
+.vakken-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4xl);
+    width: 100%;
+}
+
+.vakken-content .vak-link {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--colour-primary);
+    border-radius: var(--size-2xl);
+    padding: var(--size-2xl);
+    background-color: var(--colour-background);
+    text-decoration: none;
+    color: var(--colour-text);
+
+    & article {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-2xl);
+        align-items: center;
+
+        & div{
+            display: flex;
+            flex-direction: column;
+            gap: var(--size-xxs);
+            align-items: center;
+        }
+
+        & button{
+            background-color: var(--colour-primary);
+            color: var(--colour-background);
+            border: none;
+            width: 60%;
+            text-transform: uppercase;
+            padding: var(--size-xxs) var(--size-base);
+            border-radius: 25px;
+        }
+    }
+
+    & img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: var(--size-2xl);
+    }
+}
+
 
 /* animaties */
 @keyframes appear{
@@ -327,8 +387,14 @@ footer {
 
     .sprekers-container {
         flex-direction: row;
+        max-width: 100%;
+        flex-wrap: wrap;
     }
 
+    .vakken-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (min-width: 1024px) {

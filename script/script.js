@@ -64,21 +64,22 @@ if (itemHeader) {
 }
 
 // tabs
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
+function initTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-if (tabBtns.length > 0) {
-    document.getElementById('speakers').style.display = 'none';
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+    if (tabBtns.length > 0) {
+        const activate = (btn) => {
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            tabContents.forEach(c => c.style.display = 'none');
+            const target = document.getElementById(btn.dataset.tab);
+            if (target) target.style.display = 'flex';
+        };
 
-            tabContents.forEach(content => content.style.display = 'none');
-            document.getElementById(btn.dataset.tab).style.display = 'flex';
-        });
-    });
+        tabBtns.forEach(btn => btn.addEventListener('click', () => activate(btn)));
+        activate(tabBtns[0]);
+    }
 }
 
 // automatisch naar boven scrollen bij laden van index.html

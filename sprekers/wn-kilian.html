@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Kelly Kha</title>
-    <link href="styles/style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png?v=3">
 </head>
 
 <body class="container speakers twitterstyle">
     <header>
         <div>
             <a href="index.html">
-                <img class="logo" src="images/logo.png" alt="logo">
+                <img class="logo" src="../images/logo.png" alt="logo">
             </a>
 
             <button class="menu">
@@ -25,10 +25,10 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="speakers.html">Sprekers</a></li>
-                <li><a href="about.html">Over mij</a></li>
-                <li><a href="reflection.html">Reflectie</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a class="active" href="../speakers.html">Sprekers</a></li>
+                <li><a href="../about.html">Over mij</a></li>
+                <li><a href="../reflection.html">Reflectie</a></li>
 
                 <li>
                     <label for="colorscheme-btn">
@@ -45,18 +45,18 @@
     <section class="spreker-intro">
         <div class="banner">
             <div class="banner-img-container">
-                <img class="banner-image" src="images/spreker-kilian-header.png" alt="Kilian Valkhof">
+                <img class="banner-image" src="../images/spreker-kilian-header.png" alt="Kilian Valkhof">
             </div>
             <div class="banner-photo">
-                <img src="images/spreker-kilian.png" alt="Kilian Valkhof">
+                <img src="../images/spreker-kilian.png" alt="Kilian Valkhof">
             </div>
         </div>
 
         <div class="banner-content">
             <nav class="breadcrumbs" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li><a href="/">Home</a></li> /
-                    <li><a href="/speakers.html">Sprekers</a></li> /
+                    <li><a href="../index.html">Home</a></li> /
+                    <li><a href="../speakers.html">Sprekers</a></li> /
                     <li><a href="#">Huidige pagina</a></li>
                 </ol>
             </nav>
@@ -75,7 +75,7 @@
     <section class="tab-content" id="posts">
         <div class="content-post-container">
             <div class="post-profile-pic">
-                <img src="images/profile-pic.png" alt="">
+                <img src="../images/profile-pic.png" alt="Kelly Kha">
             </div>
 
             <div class="content-post">
@@ -123,7 +123,7 @@
 
         <div class="content-post-container">
             <div class="post-profile-pic">
-                <img src="images/profile-pic.png" alt="">
+                <img src="../images/profile-pic.png" alt="Kelly Kha">
             </div>
 
             <div class="content-post">
@@ -171,7 +171,7 @@
 
         <div class="content-post-container">
             <div class="post-profile-pic">
-                <img src="images/profile-pic.png" alt="">
+                <img src="../images/profile-pic.png" alt="Kelly Kha">
             </div>
 
             <div class="content-post">
@@ -219,7 +219,7 @@
 
         <div class="content-post-container">
             <div class="post-profile-pic">
-                <img src="images/profile-pic.png" alt="">
+                <img src="../images/profile-pic.png" alt="Kelly Kha">
             </div>
 
             <div class="content-post">
@@ -266,7 +266,7 @@
         </div>
     </section>
 
-    <section class="tab-content" id="speakers">
+    <!-- <section class="tab-content" id="speakers">
         <div class="speaker-content-container">
             <div class="speaker-banner">
                 <img class="banner-image" src="images/spreker-kilian-header.png" alt="Kilian Valkhof">
@@ -361,14 +361,29 @@
                 <p>Johan Huijkman </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    
+    <div id="speakers-component"></div>
 
     <!-- <footer>
         <p>© 2026 Kelly Kha. Alle rechten voorbehouden.</p>
     </footer> -->
 
-    <script src="script/script.js"></script>
+    <script src="../script/script.js"></script>
 </body>
 </html>
+
+<script>
+    fetch("/components/speakers.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("speakers-component").innerHTML = data;
+
+        document.querySelector('a[href="/sprekers/wn-kilian.html"]')
+            .closest(".speaker-content-container")
+            .remove();
+            
+        initTabs() 
+    });
+
+</script>
