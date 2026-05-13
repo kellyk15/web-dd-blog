@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Kelly Kha</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
+</head>
+
+<body class="container reflection-page">
+    <div class="overlay"></div>
+    <header>
+        <div>
+            <a href="index.html">
+                <img class="logo" src="images/logo.png" alt="logo">
+            </a>
+
+            <button class="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="speakers.html">Sprekers</a></li>
+                <li><a href="about.html">Over mij</a></li>
+                <li><a class="active" href="reflection.html">Reflectie</a></li>
+
+                <li>
+                    <label for="colorscheme-btn">
+                        <input type="checkbox" name="colorscheme-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                        </svg>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="popup" id="popup-letter">
+        <button class="popup-close">✕</button>
+        <h3>Reflectie</h3>
+        <p>De afgelopen periode heb ik gewerkt aan drie leerdoelen: animaties met CSS, nettere code schrijven en theming met aandacht voor toegankelijkheid. Als ik terugkijk, valt het me op dat animaties beter ging dan ik van tevoren had verwacht. Dit heb ik tijdens css to the rescue wel echt heel erg moeten inzetten en ik vond het in het begin echt heel erg lastig, want ik wist gewoon niet waar ik moest beginnen. Ik ben wel blij met wat mij uiteindelijk is gelukt om te doen, maar er zijn nog heel veel dingen die ik qua css animaties wil uitproberen.</p>
+
+        <p>
+            Iets waar ik echt trots op ben is dat ik nieuwe CSS-technieken heb geleerd die ik daarvoor nooit had gebruikt, zoals CSS nesting en @layer. Dat voelt als een echte stap vooruit, omdat ik merk dat mijn code daar overzichtelijker van wordt. Ook al is het nog wel een work in progress om mijn code netjes te houden. Ook ben ik meer comments gaan gebruiken waardoor ik makkelijk kan teruglezen en vinden.
+        </p>
+
+        <p>
+            Theming en toegankelijkheid vind ik nog steeds lastig. Light en dark mode, kleurkeuzes voor voldoende contrast en reduced motion zijn dingen waar ik bewust mee bezig wil zijn, maar het voelt nog niet als iets wat ik automatisch meeneem. Light en dark mode lukt mij wel, maar het is toch wel een puntje voor mij dat ik meer moet opletten met toegankelijkheid. Bij HCD en BT heb ik wel echt mijn best gedaan om daar mijn focus op te leggen en wil dit graag meer automatisme maken.  
+        </p>
+    </div>
+
+    <main>
+        <div class="wrapper-reflection-letter">
+            <svg width="561" height="526" viewBox="0 0 561 526" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M561 485.665C561 507.756 543.091 525.665 521 525.665H40C17.9086 525.665 0 507.756 0 485.665V170.652C0 170.107 0.442033 169.665 0.987308 169.665C1.17422 169.665 1.35728 169.612 1.51523 169.512L259.612 6.19849C272.673 -2.06616 289.327 -2.06617 302.388 6.19849L560.675 169.632C560.709 169.653 560.748 169.665 560.788 169.665C560.905 169.665 561 169.76 561 169.877V485.665Z" fill="#E49494"/>
+            </svg>
+            
+            <img src="images/reflection-letter.png" id="svg-letter" data-popup="popup-letter" alt="">
+
+            <svg width="576" height="355" viewBox="0 0 576 355" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_0_1)">
+            <path d="M112.405 348.714C112.338 348.778 112.3 348.867 112.3 348.96C112.3 349.148 112.148 349.301 111.959 349.301L46.3003 349.301C24.7612 349.301 7.30028 331.839 7.30028 310.3L7.30029 18.3009C7.30029 13.3304 11.3297 9.30098 16.3002 9.30093L111.534 9.30005C111.957 9.30004 112.3 9.64292 112.3 10.0659C112.3 10.2747 112.386 10.4745 112.536 10.619L282.18 173.104C285.88 176.648 285.88 182.56 282.18 186.103L112.405 348.714Z" fill="#E3A6A6"/>
+            </g>
+            <g filter="url(#filter1_d_0_1)">
+            <path d="M462.85 348.715C462.917 348.779 462.955 348.868 462.955 348.961C462.955 349.149 463.107 349.302 463.296 349.302L528.955 349.302C550.494 349.302 567.955 331.84 567.955 310.301L567.955 18.3019C567.955 13.3314 563.925 9.30195 558.955 9.3019L463.721 9.30102C463.298 9.30101 462.955 9.64389 462.955 10.0669C462.955 10.2757 462.869 10.4755 462.719 10.6199L293.075 173.105C289.375 176.649 289.375 182.561 293.075 186.104L462.85 348.715Z" fill="#E3A6A6"/>
+            </g>
+            <g filter="url(#filter2_d_0_1)">
+            <path d="M567.347 244.535C567.447 244.598 567.562 244.631 567.679 244.631C568.022 244.631 568.3 244.909 568.3 245.252V309.631C568.3 331.722 550.391 349.631 528.3 349.631H47.3C25.2086 349.631 7.30005 331.722 7.30005 309.631V246.027C7.30005 245.256 7.92513 244.631 8.69621 244.631C8.96052 244.631 9.2194 244.556 9.44275 244.415L266.912 81.4985C279.973 73.2339 296.627 73.2339 309.688 81.4985L567.347 244.535Z" fill="#E3A6A6"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_0_1" x="0.000292778" y="4.86374e-05" width="292.255" height="354.601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="-2"/>
+            <feGaussianBlur stdDeviation="3.65"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.726923 0 0 0 0 0.510943 0 0 0 0 0.510943 0 0 0 0.27 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+            </filter>
+            <filter id="filter1_d_0_1" x="283" y="0.0010252" width="292.255" height="354.601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="-2"/>
+            <feGaussianBlur stdDeviation="3.65"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.726923 0 0 0 0 0.510943 0 0 0 0 0.510943 0 0 0 0.27 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+            </filter>
+            <filter id="filter2_d_0_1" x="4.86374e-05" y="66" width="575.6" height="288.931" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="-2"/>
+            <feGaussianBlur stdDeviation="3.65"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.726923 0 0 0 0 0.510943 0 0 0 0 0.510943 0 0 0 0.27 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>© 2026 Kelly Kha. Alle rechten voorbehouden.</p>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

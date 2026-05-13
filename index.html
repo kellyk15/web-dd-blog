@@ -59,15 +59,35 @@
             <h2>Meesterschap Web Development Blog</h2>
         </div>
 
-        <p>Dit is een blog over mijn reis binnen de cursus Meesterschap Web Development. <br> Hier deel ik mijn
-            gedachten, ervaringen en inzichten terwijl ik leer en groei als webdeveloper.</p>
+        <p>Dit is een blog over mijn voortgang binnen de minor web design & development. <br> Hier deel ik mijn gedachten, ervaringen en inzichten terwijl ik leer en groei als webdeveloper.</p>
 
         <div class="header-image">
             <img src="images/letter-bg.svg" alt="">
 
-            <img class="item-header" src="images/jerry.png" alt="">
+            <img class="item-header" src="images/jerry.png" alt="" data-popup="popup-jerry">
+            <img class="item-header" src="images/kel.png" alt="" data-popup="popup-kel">
+            <img class="item-header" src="images/bunny.png" alt="" data-popup="popup-bunny">
 
             <img src="images/letter-fg.svg" alt="">
+        </div>
+
+        <!-- Popups -->
+        <div class="popup" id="popup-jerry">
+            <button class="popup-close">✕</button>
+            <h3>Mijn mening uiten in groepsopdrachten</h3>
+            <p>Ik wil actiever mijn mening en ideeën uiten tijdens groepsopdrachten. Ik merk dat ik vaak meega met de groep, terwijl ik eigenlijk een ander idee heb. Daardoor draag ik minder bij dan ik zou kunnen. Om hieraan te werken ga ik in elke groepsmeeting minimaal één eigen standpunt of idee uitspreken, ook als ik twijfel of het goed is. Daarna reflecteer ik kort in mijn blog op hoe dat ging.</p>
+        </div>
+
+        <div class="popup" id="popup-kel">
+            <button class="popup-close">✕</button>
+            <h3>Creatiever zijn in mijn ontwerp en code</h3>
+            <p>Ik wil bewust creatievere en onverwachtere keuzes maken in mijn werk. Ik merk dat ik snel grijp naar veilige, voorspelbare oplossingen. Bij de meesterproef ga ik daarom één bewuste ontwerpkeuze maken die ik normaal zou vermijden, zoals een onverwachte kleur, een experimentele layout of een animatie. </p>
+        </div>
+
+        <div class="popup" id="popup-bunny">
+            <button class="popup-close">✕</button>
+            <h3>Een nieuwe techniek uitproberen</h3>
+            <p>Ik wil voor de meesterproef een techniek of tool uitproberen die ik nog nooit heb gebruikt. Ik merk dat ik blijf hangen in wat ik al ken, terwijl de minor juist het perfecte moment is om te experimenteren zonder dat het meteen perfect hoeft te zijn. Ik ga documenteren wat ik heb geprobeerd, wat werkte en wat niet. Misschien calc of javascript of uniekere animaties.</p>
         </div>
     </section>
 
@@ -316,7 +336,7 @@
         </div>
     </section>
 
-    <section class="vakken-content-wrapper">
+    <!-- <section class="vakken-content-wrapper">
         <div class="vakken-content">    
             <a href="/vakken/sprint-0" class="vak-link">
                 <article class="vak-sprint-0">
@@ -355,7 +375,47 @@
                 </article>
             </a>
         </div>
+    </section> -->
+
+    <section class="wrapper-vakken">
+        <div class="vakken-title">
+            <h2>Vakken</h2>
+            <a href="/vakken/vakken.html">bekijk alle vakken</a>
+        </div>
+
+        <div class="vakken-container">
+            <a href="https://kellyk15.github.io/web-dd-kelly/" target="_blank">
+                <div class="vak">
+                    <div class="vak-text">
+                        <div class="vak-gradient"></div>
+                        <h3>Sprint 0</h3>
+                        <p>het begin van deze minor</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://kellyk15.github.io/web-dd-css-to-the-rescue/" target="_blank">
+                <div class="vak" id="vak-2">
+                    <div class="vak-text">
+                        <div class="vak-gradient"></div>
+                        <h3>CSS</h3>
+                        <p>css to the resue</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://kellyk15.github.io/web-dd-bt-kelly/" target="_blank">
+                <div class="vak" id="vak-3">
+                    <div class="vak-text">
+                        <div class="vak-gradient"></div>
+                        <h3>Browser Tech</h3>
+                        <p>hoe werkt een form nou eigenlijk?</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
+
 
     <footer>
         <p>© 2026 Kelly Kha. Alle rechten voorbehouden.</p>
